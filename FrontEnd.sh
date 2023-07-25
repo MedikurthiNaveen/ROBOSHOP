@@ -6,6 +6,8 @@ echo Clearing Conetent
 rm -rf /usr/share/nginx/html/*
 echo Downloading HTML Content
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
+cd /usr/share/nginx/html
+unzip /tmp/frontend.zip
 systemctl enable nginx
 
 echo restaring
