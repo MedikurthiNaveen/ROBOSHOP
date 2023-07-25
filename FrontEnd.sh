@@ -9,7 +9,7 @@ curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.z
 systemctl enable nginx
 
 echo restaring
-systemctl restart nginx /var/log/messages
+systemctl restart nginx
 
 
 
