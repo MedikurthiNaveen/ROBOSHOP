@@ -12,8 +12,9 @@ cd /app
 unzip /tmp/catalogue.zip
 cd /app
 npm install
-systemctl daemon-reload
+
 yum install mongodb-org-shell -y
 mongo --host mongodb.learndevops74.online </app/schema/catalogue.js
+systemctl daemon-reload
 systemctl enable catalogue
 systemctl start catalogue
