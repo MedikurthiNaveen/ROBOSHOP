@@ -1,6 +1,7 @@
 echo installing nginx
 yum install nginx -y
-
+systemctl enable nginx 
+systemctl start nginx 
 cp NginxFrontend.conf /etc/nginx/default.d/roboshop.conf
 echo Clearing Conetent
 rm -rf /usr/share/nginx/html/*
