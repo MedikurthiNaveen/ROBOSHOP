@@ -1,5 +1,5 @@
 yum module disable mysql -y
-cp MYSQL.conf yum module disable mysql -y
+cp MYSQL.conf /etc/yum.repos.d/mysql.repo
 yum install mysql-community-server -y
 systemctl enable mysqld
 systemctl start mysqld
