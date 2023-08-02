@@ -1,7 +1,9 @@
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+cp Cart.service etc/systemd/system/cart.service
+cp .conf /etc/yum.repos.d/mongo.repo
 yum install nodejs -y
 
-cp Cart.service etc/systemd/system/cart.service
+
 useradd roboshop
 mkdir /app
 curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip
