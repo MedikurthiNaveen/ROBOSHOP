@@ -1,6 +1,8 @@
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 cp Cart.service etc/systemd/system/cart.service
-cp .conf /etc/yum.repos.d/mongo.repo
+cp MongoDB.conf /etc/yum.repos.d/mongo.repo
+
+curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+
 yum install nodejs -y
 
 
