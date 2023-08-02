@@ -1,12 +1,12 @@
 cp Cart.service etc/systemd/system/cart.service
-cp MongoDB.conf /etc/yum.repos.d/mongo.repo
+
 
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 yum install nodejs -y
 
-
 useradd roboshop
+
 mkdir /app
 curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip
 
